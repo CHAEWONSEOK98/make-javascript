@@ -1,3 +1,5 @@
+"use strict";
+
 const container = document.querySelector("#container");
 const form = document.querySelector("#form");
 const input = document.querySelector("#input");
@@ -7,8 +9,10 @@ const arr = new Array();
 
 const ul = document.createElement("ul");
 container.appendChild(ul);
-const storageUl = document.createElement("ul");
-container.appendChild(storageUl);
+
+window.addEventListener("load", () => {
+  input.focus();
+});
 
 btn.addEventListener("click", (event) => {
   arr[0] === undefined ? (arr[0] = input.value) : (arr[1] = input.value);
@@ -29,6 +33,7 @@ btn.addEventListener("click", (event) => {
     } else {
       li.innerText = `땡!`;
       ul.appendChild(li);
+      input.value = "";
     }
   }
 });
