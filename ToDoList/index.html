@@ -8,23 +8,21 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <form submit id="toDoForm">
-      <fieldset>
-        <legend>todolist</legend>
-        <div class="center">
-          <input type="text" id="toDoFormInput" />
-          <button id="toDoFormBtn">추가</button>
-        </div>
-      </fieldset>
-    </form>
+    <div id="to-do-list">
+      <section id="to-do-view">
+        <input type="text" id="to-do-input" placeholder="toDoList" />
+        <ul id="to-do-view-list"></ul>
+      </section>
 
-    <section>
-      <div id="todo">
-        <div id="toDoView"></div>
-        <div id="toDoResult"></div>
-      </div>
-    </section>
+      <section id="to-do-result">
+        <ul id="to-do-result-list"></ul>
+      </section>
+    </div>
 
     <script src="./main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5f469c9124.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
