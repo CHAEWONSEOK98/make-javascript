@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toDoForm {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  width: 500px;
+}
+#toDoFormInput {
+  width: 300px;
+  padding: 2px;
+}
+
+#toDoFormBtn {
+  margin-left: 15px;
+}
+
+#toDoFormBtn:hover {
+  cursor: pointer;
+}
+
+#todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#toDoView {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateX(20%);
+}
+
+#toDoResult {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateX(-20%);
+}
