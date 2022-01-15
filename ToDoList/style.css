@@ -27,9 +27,16 @@ ul {
   padding: 0 16px;
   outline: none;
   height: 50px;
-  font-size: 18px;
+  font-size: 16px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: black;
+  margin: auto;
 }
 
 #to-do-view {
