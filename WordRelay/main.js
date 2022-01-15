@@ -16,6 +16,9 @@ window.addEventListener("load", () => {
 
 btn.addEventListener("click", (event) => {
   arr[0] === undefined ? (arr[0] = input.value) : (arr[1] = input.value);
+  if (parseInt(input.value.length) > 3) {
+    preventDefault();
+  }
   const brr0 = arr[0].split("");
   const li = document.createElement("li");
   if (arr[1] === undefined) {
