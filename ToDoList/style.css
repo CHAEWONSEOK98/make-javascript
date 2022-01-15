@@ -27,6 +27,7 @@ ul {
   padding: 0 16px;
   outline: none;
   height: 50px;
+  line-height: 50px;
   font-size: 16px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -49,13 +50,21 @@ ul {
   height: 350px;
 }
 
-#to-do-result {
+#done {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  padding: 0 16px;
+}
+
+#to-do-done {
   width: 300px;
   background-color: #f5f5f5;
   border-radius: 15px;
 }
 
-#to-do-result-list {
-  height: 400px;
+#to-do-done-list {
+  height: 350px;
   width: 300px;
 }
