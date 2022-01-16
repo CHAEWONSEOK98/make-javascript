@@ -15,9 +15,9 @@ ul {
 }
 
 li {
-  padding: 4px 16px;
-  display: flex;
-  justify-content: space-between;
+  padding: 0 16px;
+  height: 50px;
+  line-height: 50px;
 }
 
 #to-do-list {
@@ -47,6 +47,13 @@ li {
   margin: auto;
 }
 
+.listLine {
+  width: 100%;
+  height: 1px;
+  background-color: #d1c4e9;
+  margin: auto;
+}
+
 #to-do-view {
   width: 300px;
   background-color: #f5f5f5;
@@ -55,10 +62,16 @@ li {
 
 #to-do-view-list {
   height: 350px;
+  overflow-y: auto;
 }
 
 .iconBox {
   display: inline-block;
+  float: right;
+}
+
+.toDoText {
+  opacity: 0.5;
 }
 
 .addBtn {
@@ -99,4 +112,5 @@ li {
 #to-do-done-list {
   height: 350px;
   width: 300px;
+  overflow-y: auto;
 }
