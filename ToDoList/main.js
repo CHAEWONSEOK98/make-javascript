@@ -38,26 +38,18 @@ toDoInput.addEventListener("keypress", (event) => {
     toDoViewList.appendChild(li);
 
     removeBtn.addEventListener("click", () => {
-      iconBox.remove();
-      moveList(li);
+      addBtn.remove();
+      moveList(li, removeBtn);
       toDoViewList.removeChild(li);
     });
     toDoInput.value = "";
   }
 });
 
-function moveList(li) {
-  const doneRemoveBtn = document.createElement("button");
-  doneRemoveBtn.setAttribute("class", "fas fa-trash doneRemoveBtn");
-
-  const iconBox = document.createElement("div");
-  iconBox.setAttribute("class", "iconBox");
-
-  iconBox.appendChild(doneRemoveBtn);
-  li.appendChild(iconBox);
+function moveList(li, removeBtn) {
   toDoDoneList.appendChild(li);
 
-  doneRemoveBtn.addEventListener("click", () => {
+  removeBtn.addEventListener("click", () => {
     toDoDoneList.removeChild(li);
   });
 }
