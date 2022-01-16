@@ -25,19 +25,39 @@ toDoInput.addEventListener("keypress", (event) => {
     });
     const removeBtn = document.createElement("button");
     removeBtn.setAttribute("class", "fas fa-trash removeBtn");
-    removeBtn.addEventListener("click", () => {
-      toDoViewList.removeChild(li);
-    });
     const iconBox = document.createElement("div");
     iconBox.setAttribute("class", "iconBox");
     const listLine = document.createElement("div");
     listLine.setAttribute("class", "listLine");
+
     iconBox.appendChild(addBtn);
     iconBox.appendChild(removeBtn);
     li.appendChild(toDo);
     li.appendChild(iconBox);
     li.appendChild(listLine);
     toDoViewList.appendChild(li);
+
+    removeBtn.addEventListener("click", () => {
+      iconBox.remove();
+      moveList(li);
+      toDoViewList.removeChild(li);
+    });
     toDoInput.value = "";
   }
 });
+
+function moveList(li) {
+  const doneRemoveBtn = document.createElement("button");
+  doneRemoveBtn.setAttribute("class", "fas fa-trash doneRemoveBtn");
+
+  const iconBox = document.createElement("div");
+  iconBox.setAttribute("class", "iconBox");
+
+  iconBox.appendChild(doneRemoveBtn);
+  li.appendChild(iconBox);
+  toDoDoneList.appendChild(li);
+
+  doneRemoveBtn.addEventListener("click", () => {
+    toDoDoneList.removeChild(li);
+  });
+}
