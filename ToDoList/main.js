@@ -17,14 +17,21 @@ toDoInput.addEventListener("keypress", (event) => {
     const toDo = document.createElement("span");
     toDo.setAttribute("class", "toDoText");
     toDo.textContent = toDoInput.value;
+    const addBtn = document.createElement("button");
+    addBtn.setAttribute("class", "fas fa-pen addBtn");
+    addBtn.addEventListener("click", () => {
+      const change = prompt("make your todo");
+      toDo.textContent = change;
+    });
+    const removeBtn = document.createElement("button");
+    removeBtn.setAttribute("class", "fas fa-trash removeBtn");
+    removeBtn.addEventListener("click", () => {
+      toDoViewList.removeChild(li);
+    });
     const iconBox = document.createElement("div");
     iconBox.setAttribute("class", "iconBox");
     const listLine = document.createElement("div");
     listLine.setAttribute("class", "listLine");
-    const addBtn = document.createElement("button");
-    addBtn.setAttribute("class", "fas fa-pen addBtn");
-    const removeBtn = document.createElement("button");
-    removeBtn.setAttribute("class", "fas fa-trash removeBtn");
     iconBox.appendChild(addBtn);
     iconBox.appendChild(removeBtn);
     li.appendChild(toDo);
