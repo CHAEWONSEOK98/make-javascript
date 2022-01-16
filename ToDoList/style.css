@@ -14,6 +14,12 @@ ul {
   padding: 0;
 }
 
+li {
+  padding: 4px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
 #to-do-list {
   height: 100vh;
   display: flex;
@@ -37,6 +43,7 @@ ul {
   width: 90%;
   height: 1px;
   background-color: black;
+  opacity: 0.3;
   margin: auto;
 }
 
@@ -48,6 +55,31 @@ ul {
 
 #to-do-view-list {
   height: 350px;
+}
+
+.iconBox {
+  display: inline-block;
+}
+
+.addBtn {
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  color: #d1c4e9;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #d1c4e9;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
 }
 
 #done {
