@@ -4,27 +4,28 @@
   padding: 0;
 }
 
-#animationBall {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -30%);
-  width: 300px;
-  height: 300px;
-  border: 1px solid black;
-  margin-bottom: 50px;
-}
-
-#btn {
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, -70%);
-}
-
 #showRandomBall {
   position: absolute;
   left: 50%;
-  bottom: 20%;
-  transform: translate(-50%, -20%);
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#option {
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+  transform: translate(-50%, -40%);
+}
+
+.ball {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 15px;
 }
