@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*header*/
+header {
+  background-color: #3c5ba5;
+  height: 60px;
+  line-height: 60px;
+}
+
+#headerText {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#chatBoard {
+  color: #fff;
+  font-size: 22px;
+  background-color: #b39ddb;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  visibility: hidden;
+}
+
+/*random-text*/
+
+#randomText {
+  font-size: 60px;
+  color: #3c5ba5;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+
+#chatting {
+  width: 250px;
+  height: 30px;
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+/*timerAndScore*/
+#timerAndScore {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#timer {
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+#timerNumber {
+  font-size: 24px;
+}
+
+#score {
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+#scoreNumber {
+  font-size: 24px;
+}
+
+/*game-btn*/
+#gameBtn {
+  background-color: #3c5ba5;
+  width: 230px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+}
