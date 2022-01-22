@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cursor</title>
+    <style>
+      body {
+        background-color: #b39ddb;
+      }
+
+      .target {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        background-color: transparent;
+        width: 75px;
+        height: 75px;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="target"></div>
+    <script>
+      const $target = document.querySelector(".target");
+
+      document.addEventListener("mousemove", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        $target.style.top = `${y}px`;
+        $target.style.left = `${x}px`;
+      });
+
+      /*
+      $target.addEventListener의 경우에는 끊김 현상이 발생하는데 
+      document.addEventListener의 경우에는 끊김 현상이 발생하지않음.
+      => 이벤트 발생 속도 차이? $target.addEventListener의 경우 이벤트 발생 속도를 좌표가 못 따라감?
+      */
+    </script>
+  </body>
+</html>
