@@ -1,38 +1,23 @@
-// <⚠️ DONT DELETE THIS ⚠️>
-import "./styles.css";
-const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
-// <⚠️ /DONT DELETE THIS ⚠️>
+"use strict";
 
-/*
-✅ The text of the title should change when the mouse is on top of it.
-✅ The text of the title should change when the mouse is leaves it.
-✅ When the window is resized the title should change.
-✅ On right click the title should also change.
-✅ The colors of the title should come from a color from the colors array.
-✅ DO NOT CHANGE .css, or .html files.
-✅ ALL function handlers should be INSIDE of "superEventHandler"
-*/
-const title = document.querySelector("h2");
+const hello = document.createElement("h2");
+hello.innerText = `Hello!`;
+const body = document.querySelector("body");
+body.append(hello);
 
-const superEventHandler = {
-  enter: function () {
-    title.textContent = "The mouse is here!";
-    title.style.color = colors[0];
-  },
-  leave: function () {
-    title.textContent = "The mouse is gone!";
-    title.style.color = colors[1];
-  },
-  resize: function () {
-    title.innerText = "You just resized!";
-    title.style.color = colors[2];
-  },
-  click: function () {
-    title.innerHTML = "That was a right click!";
-    title.style.color = colors[3];
-  },
-};
-title.addEventListener("mouseenter", superEventHandler.enter);
-title.addEventListener("mouseleave", superEventHandler.leave);
-window.addEventListener("resize", superEventHandler.resize);
-window.addEventListener("auxclick", superEventHandler.click);
+window.addEventListener("resize", () => {
+  let width = window.innerWidth;
+  if (width > 750) {
+    body.classList.remove("skyblue");
+    body.classList.remove("orange");
+    body.classList.add("purple");
+  } else if (width < 150 || width > 500) {
+    body.classList.remove("purple");
+    body.classList.remove("orange");
+    body.classList.add("skyblue");
+  } else {
+    body.classList.remove("skyblue");
+    body.classList.remove("purple");
+    body.classList.add("orange");
+  }
+});
